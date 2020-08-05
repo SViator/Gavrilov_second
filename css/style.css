@@ -25,7 +25,8 @@ body {
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
 .wrapper {
-  max-width: 940px;
+  max-width: 970px;
+  padding: 0 15px;
   margin: 0 auto;
 }
 
@@ -201,17 +202,9 @@ footer p {
   color: #222222;
 }
 
-@media (max-width: 543px) {
-  section {
-    padding-top: 50px;
-  }
-  .section__title {
-    margin-bottom: 35px;
-  }
+@media (max-width: 767px) {
   .services .content {
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 50px;
+     margin-bottom: 50px;
   }
   .services .blok img {
     padding-top: 20px;
@@ -223,24 +216,43 @@ footer p {
   .portfolio .content {
     padding-bottom: 50px;
   }
+  .about_us .blok {
+     margin: 0;
+     padding: 15px 0 35px;
+   }
+   .about_us .card h3 {
+     margin-bottom: 12px;
+   }.card {
+     padding-top: 20px;
+   }
+   section {
+     padding-top: 50px;
+   }
+   .section__title {
+     margin-bottom: 35px;
+   }
+
+  footer {
+     padding: 20px 0 10px;
+   }
+}
+
+@media (max-width: 543px) {
+  
+   .services .content {
+    flex-direction: column;
+    align-items: center;     
+  }
 
   .about_us .blok {
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 15px 0 35px;
-  }
-  .about_us .card h3 {
-    margin-bottom: 12px;
   }
   .card {
-    padding-top: 20px;
     text-align: center;
   }
   .left .card {
     text-align: center;
   }
-  footer {
-    padding: 20px 0 10px;
-  }
 }
+
