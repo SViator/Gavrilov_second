@@ -1,4 +1,4 @@
-/* reset */
+/* ------------ reset ------------ */
 html {
   box-sizing: border-box;
 }
@@ -17,7 +17,7 @@ a {
 li {
   list-style-type: none;
 }
-/* *** */
+
 
 body {
   max-width: 1400px;
@@ -30,26 +30,30 @@ body {
   margin: 0 auto;
 }
 
-/*  header  */
+
+/* ------------ header ------------ */
 header {
-  background: url(../img/first-bg.jpg) no-repeat center top / cover;
+  position: fixed;
+  left: 0;
+  right: 0; 
+  max-width: 1400px;
+  margin: 0 auto; 
+  background-color: rgba(15, 14, 14, 0.856);
 }
-
-/*  nav  */
 nav {
-  padding-top: 44px;
   display: flex;
-
   justify-content: space-between;
-  margin-bottom: 206px;
+  align-items: center;
+  max-width: 970px;
+  margin: 0 auto;
+  padding: 1vw 15px;
 }
 .menu {
   display: flex;
-  flex-wrap: wrap;
   align-items: flex-end;
 }
 .menu li {
-  margin-left: 43px;
+  margin-left: 3vw;
 }
 .menu li:first-child {
   margin-left: 0;
@@ -64,52 +68,16 @@ nav {
 .menu a:hover {
   color: #999797;
 }
-/* END  nav  */
 
-/*  titles  */
-.titles {
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  padding-bottom: 186px;
-}
-.title__first {
-  font-size: 40px;
-  letter-spacing: -1px;
-  margin-bottom: 51px;
-}
-.title__second {
-  font-size: 75px;
-  font-weight: bold;
-  letter-spacing: -1.88px;
-  margin-bottom: 59px;
-}
-.button {
-  display: block;
-  max-width: 240px;
-  margin: 0 auto;
-  color: #484543;
-  font-size: 18px;
-  font-weight: bold;
-  background-color: #fed136;
-  padding: 24px 52px;
-  border-radius: 3px;
-  transition: 0.2s;
-}
-.button:hover {
-  background-color: #c49a13;
-}
-/*  END  titles  */
-/*  END  header  */
 
-/*  sections  */
+/* ------------ sections ------------ */
 section {
-  padding-top: 120px;
+  padding-top: 8.57vw;
 }
 .section__title {
   margin: 0 auto;
   text-align: center;
-  margin-bottom: 77px;
+  margin-bottom: 5.5vw;
 }
 section h2 {
   color: #222222;
@@ -132,24 +100,64 @@ footer p {
   font-size: 16px;
 }
 
-/*  services  */
-.services .content {
+
+/* ----------- welcome ----------- */
+.welcome {
+  background: url(../img/first-bg.jpg) no-repeat center top / cover;
+}
+.titles {
+  color: #fff;
+  text-transform: uppercase;
   text-align: center;
+  margin-top: 10.7vw;
+  padding-bottom: 13.2vw;
+}
+.title__first {
+  font-size: calc(25px + 15*(100vw / 1400));
+  letter-spacing: -1px;
+  margin-bottom: 3.57vw;
+}
+.title__second {
+  font-size: calc(55px + 20*(100vw / 1400));
+  font-weight: bold;
+  letter-spacing: -1.88px;
+  margin-bottom: 4.3vw;
+}
+.button {
+  display: block;
+  max-width: 240px;
+  margin: 0 auto;
+  padding: 24px 52px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 3px;
+  color: #484543;
+  background-color: #fed136;
+  transition: 0.2s;
+}
+.button:hover {
+  background-color: #c49a13;
+}
+
+
+/* ------------ services ------------ */
+.services .content {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  margin-bottom: 118px;
+  text-align: center;
+  margin-bottom: 8.4vw;
 }
 .services .blok {
   width: 249px;
   padding: 10px;
 }
 .services .blok img {
-  margin-bottom: 25px;
+  margin-bottom: 1.8vw;
 }
-/*  END  services  */
 
-/*  portfolio  */
+
+/* ------------ portfolio ------------ */
 .portfolio {
   background: #f7f7f7;
 }
@@ -157,10 +165,11 @@ footer p {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  padding-bottom: 133px;
-} /*  END  portfolio  */
+  padding-bottom: 9.5vw;
+} 
 
-/*  about us  */
+
+/* ------------ about us ------------ */
 .about_us .content {
   max-width: 843px;
   margin: 0 auto;
@@ -169,7 +178,7 @@ footer p {
   display: flex;
   justify-content: flex-end;
   align-items: start;
-  margin-bottom: 90px;
+  margin-bottom: 6.4vw;
 }
 .left {
   flex-direction: row-reverse;
@@ -194,46 +203,42 @@ footer p {
   letter-spacing: -0.45px;
   text-transform: uppercase;
 }
-/*  END about us  */
 
+
+/* ------------ footer ------------ */
 footer p {
-  padding: 27px 0 112px;
+  padding: 1.9vw 0 8vw;
   text-align: center;
   color: #222222;
 }
 
-@media (max-width: 767px) {
-  .services .content {
-     margin-bottom: 50px;
+
+/* ------------ media ------------ */
+@media (max-width: 767px) {  
+  .title__first {
+    font-size: calc(25px + (15 + 15 * 0.7) * ((100vw - 320px) / 1400));
   }
+  .title__second {
+    font-size: calc(55px + (20 + 20 * 0.7)*((100vw - 320px) / 1400));
+  }  
   .services .blok img {
     padding-top: 20px;
-    margin-bottom: 10px;
   }
   .portfolio .blok {
     margin-bottom: 20px;
-  }
-  .portfolio .content {
-    padding-bottom: 50px;
-  }
+  }  
   .about_us .blok {
      margin: 0;
      padding: 15px 0 35px;
    }
    .about_us .card h3 {
      margin-bottom: 12px;
-   }.card {
+   }
+   .card {
      padding-top: 20px;
    }
    section {
      padding-top: 50px;
-   }
-   .section__title {
-     margin-bottom: 35px;
-   }
-
-  footer {
-     padding: 20px 0 10px;
    }
 }
 
