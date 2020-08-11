@@ -24,6 +24,7 @@ body {
   margin: 0 auto;
   font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
 }
+
 .wrapper {
   max-width: 970px;
   padding: 0 15px;
@@ -32,41 +33,148 @@ body {
 
 
 /* ------------ header ------------ */
-header {
+.header {
+  position: relative;
+  display: block;
+  max-width: 1400px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.header-wrap {
   position: fixed;
   left: 0;
-  right: 0; 
+	right: 0;
   max-width: 1400px;
-  margin: 0 auto; 
-  background-color: rgba(15, 14, 14, 0.856);
+  margin: 0 auto;
+  background-color: rgba(51, 51, 53, 0.932);
 }
-nav {
+
+.nav-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   max-width: 970px;
   margin: 0 auto;
-  padding: 1vw 15px;
+  padding: 1.4vw 1.4vw;
 }
-.menu {
+
+
+/* ---------- Desktop navigation ---------*/
+.nav {
   display: flex;
-  align-items: flex-end;
 }
-.menu li {
-  margin-left: 3vw;
+
+.nav__item {
+  margin-right: 3vw;
 }
-.menu li:first-child {
-  margin-left: 0;
+
+.nav__item:last-child {
+  margin-right: 0;
 }
-.menu a {
+
+.nav__link {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: normal;
+  color: #fff;
+  transition: 0.2s;
+}
+
+.nav__link:hover {
+  color: #999797;
+}
+
+
+
+/*----------- Mobile navigation button -----*/
+.burger-icon {
+  position: relative;
+  z-index: 19;
+  width: 30px;
+  height: 30px;
+  display: none;
+}
+
+.burger-line {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+}
+.burger-line::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -10px;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.burger-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 30px;
+  height: 4px;
+  background-color: #fff;
+  transition: transform 0.2s ease-in, top 0.2s linear 0.2s;
+}
+
+.burger-icon.burger-icon-active .burger-line {
+  background-color: transparent;
+}
+
+.burger-icon.burger-icon-active .burger-line::before {
+  transform: rotate(45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+.burger-icon.burger-icon-active .burger-line::after {
+  transform: rotate(-45deg);
+  top: 0;
+  transition: top 0.2s linear, transform 0.2s ease-in 0.2s;
+}
+
+
+/* ---------- Mobile navigation -----------*/
+.mobile-nav {
+  position: absolute;
+  /* right: -350px; */
+  top: 0;
+  z-index: 9;
+  display: none;
+  height: 100vh;
+  padding-top: 23px;
+  padding-left: 40px;
+  background-color: rgba(36, 34, 34, 0.918);
+  transition: transform 0.3s ease-in;
+}
+
+.mobile-nav--active {
+  transform: translateX(-100%);
+}
+
+.mobile-nav__title {
+  font-size: 22px;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: rgb(209, 212, 25);
+}
+
+.mobile-nav__item {
+  margin-bottom: 30px;
+}
+
+.mobile-nav__link {
   color: #fff;
   text-transform: uppercase;
   font-size: 14px;
   font-weight: normal;
-  transition: 0.2s;
-}
-.menu a:hover {
-  color: #999797;
 }
 
 
@@ -74,11 +182,13 @@ nav {
 section {
   padding-top: 8.57vw;
 }
+
 .section__title {
   margin: 0 auto;
   text-align: center;
   margin-bottom: 5.5vw;
 }
+
 section h2 {
   color: #222222;
   font-size: 40px;
@@ -87,6 +197,7 @@ section h2 {
   letter-spacing: -1px;
   margin-bottom: 10px;
 }
+
 section h3 {
   color: #222222;
   font-size: 18px;
@@ -94,6 +205,7 @@ section h3 {
   letter-spacing: -0.45px;
   margin-bottom: 18px;
 }
+
 section,
 footer p {
   color: #777777;
@@ -105,6 +217,7 @@ footer p {
 .welcome {
   background: url(../img/first-bg.jpg) no-repeat center top / cover;
 }
+
 .titles {
   color: #fff;
   text-transform: uppercase;
@@ -112,17 +225,20 @@ footer p {
   margin-top: 10.7vw;
   padding-bottom: 13.2vw;
 }
+
 .title__first {
   font-size: calc(25px + 15*(100vw / 1400));
   letter-spacing: -1px;
   margin-bottom: 3.57vw;
 }
+
 .title__second {
   font-size: calc(55px + 20*(100vw / 1400));
   font-weight: bold;
   letter-spacing: -1.88px;
   margin-bottom: 4.3vw;
 }
+
 .button {
   display: block;
   max-width: 240px;
@@ -135,6 +251,7 @@ footer p {
   background-color: #fed136;
   transition: 0.2s;
 }
+
 .button:hover {
   background-color: #c49a13;
 }
@@ -148,10 +265,12 @@ footer p {
   text-align: center;
   margin-bottom: 8.4vw;
 }
+
 .services .blok {
   width: 249px;
   padding: 10px;
 }
+
 .services .blok img {
   margin-bottom: 1.8vw;
 }
@@ -161,6 +280,7 @@ footer p {
 .portfolio {
   background: #f7f7f7;
 }
+
 .portfolio .content {
   display: flex;
   justify-content: space-around;
@@ -174,34 +294,58 @@ footer p {
   max-width: 843px;
   margin: 0 auto;
 }
+
 .about_us .blok {
   display: flex;
   justify-content: flex-end;
   align-items: start;
   margin-bottom: 6.4vw;
 }
+
 .left {
   flex-direction: row-reverse;
 }
+
 .about_us .blok img {
   margin: 0 30px;
 }
+
 .card {
   width: 280px;
   margin: 0 10px;
 }
+
 .card h3 {
   margin-bottom: 18px;
 }
+
 .left .card {
   text-align: right;
 }
+
 .date {
   color: #222222;
   font-size: 18px;
   font-weight: bold;
   letter-spacing: -0.45px;
   text-transform: uppercase;
+}
+
+
+/* ----------- contacts ----------- */
+.contacts__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 20px 0;
+  border-top: 2px double rgba(51, 51, 53, 0.582);
+  border-bottom: 7px double rgba(51, 51, 53, 0.582);
+}
+
+.contacts_blok {
+  font-size: 20px;
+  text-align: center;
+  color: #222222;
 }
 
 
@@ -214,33 +358,71 @@ footer p {
 
 
 /* ------------ media ------------ */
-@media (max-width: 767px) {  
+@media (max-width: 767px) {
+  .nav {
+    display: none;
+  }
+
+  .nav-container {
+    padding-right: 40px;
+  }
+
+  .burger-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .mobile-nav {
+    display: block;
+    width: 275px;
+    right: -275px;
+  }
+
   .title__first {
     font-size: calc(25px + (15 + 15 * 0.7) * ((100vw - 320px) / 1400));
   }
+
   .title__second {
     font-size: calc(55px + (20 + 20 * 0.7)*((100vw - 320px) / 1400));
   }  
+
   .services .blok img {
     padding-top: 20px;
   }
+
   .portfolio .blok {
     margin-bottom: 20px;
-  }  
+  }
+
   .about_us .blok {
      margin: 0;
      padding: 15px 0 35px;
    }
+
    .about_us .card h3 {
      margin-bottom: 12px;
    }
+
+   .contacts__content {
+    flex-direction: column;
+    align-items: center;
+   }
+
+   .contacts_blok {
+     margin-bottom: 20px;
+   }
+
    .card {
      padding-top: 20px;
    }
+
    section {
      padding-top: 50px;
    }
 }
+
+
 
 @media (max-width: 543px) {
   

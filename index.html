@@ -11,28 +11,42 @@
 
 
 <body>
+  <header class="header">
+    <div class="header-wrap">
+      <div class="nav-container">
+        <img src="img/-e-logo.png" alt="Gold">
 
-  <header>
-    <nav>
-      <img src="img/-e-logo.png" alt="Golden" />
-      <ul class="menu">
-        <li>
-          <a href="#">Home</a>
-        </li>
-        <li>
-          <a href="#services">Services</a>
-        </li>
-        <li>
-          <a href="#portfolio">Portfolio</a>
-        </li>
-        <li>
-          <a href="#about_us">About</a>
-        </li>
-        <li>
-          <a href="#">Contact</a>
-        </li>
-      </ul>
-    </nav>
+        <!--NAVIGATION-->
+        <div class="nav-wrapper">
+
+          <!--Desktop navigation-->
+          <ul class="nav">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
+            <li class="nav__item"><a href="#about_us" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#contacts" class="nav__link">Contact</a></li>
+          </ul>
+
+          <!--Mobile button-->
+          <div id="burger-toggle" class="burger-icon">
+            <div class="burger-line"></div>
+          </div>
+
+          <!--Mobile navigation-->
+          <div id="mobile-nav" class="mobile-nav">
+            <div class="mobile-nav__title">Navigation</div>
+            <ul class="mobile-nav__list">
+              <li class="mobile-nav__item"><a href="#" class="mobile-nav__link">Home</a></li>
+              <li class="mobile-nav__item"><a href="#services" class="mobile-nav__link">Services</a></li>
+              <li class="mobile-nav__item"><a href="#portfolio" class="mobile-nav__link">Portfolio</a></li>
+              <li class="mobile-nav__item"><a href="#about_us" class="mobile-nav__link">About</a></li>
+              <li class="mobile-nav__item"><a href="#contacts" class="mobile-nav__link">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </header>
 
 
@@ -49,8 +63,6 @@
       </div>
     </div>
   </section>
-
-
   <a name="services"></a>
   <section class="services">
     <div class="wrapper">
@@ -183,12 +195,37 @@
     </div>
   </section>
 
+  <a name="contacts"></a>
+  <section class="contacts">
+    <div class="wrapper">
+      <div class="contacts__content">
+        <div class="contacts_blok">
+          <img src="img/all-cell_74px.png" alt="Fone">
+          <p>+xx(vvv)xxx-xx-xx</p>
+          <p>+xx(vvv)xxx-xx-xx</p>
+          <p>+xx(vvv)xxx-xx-xx</p>
+          <p>+xx(vvv)xxx-xx-xx</p>
+        </div>
+        <div class="contacts_blok">
+          <img src="img/urban_style.jpg" alt="img">
+        </div>
+        <div class="contacts_blok">
+          <img src="img/web_h74px.jpg" alt="Fone">
+          <p>name.name@email.com</p>
+          <p>name.name@email.com</p>
+          <p>name.name@email.com</p>
+          <p>name.name@email.com</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <p>© Copyright 2014 FreebiesXpress.com</p>
+    <p>© Copyright 2020 AlexLid.com</p>
   </footer>
   </div>
 
+  <script src="main.js"></script>
 </body>
 
 </html>
